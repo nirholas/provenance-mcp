@@ -1,0 +1,62 @@
+{
+	"$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+	"name": "io.github.nirholas/provenance-mcp",
+	"title": "three.ws Provenance",
+	"description": "Append-only, signed, on-chain-verifiable agent action log — record and audit what agents did.",
+	"websiteUrl": "https://three.ws",
+	"icons": [
+		{
+			"src": "https://three.ws/three-ws-mcp-icon.svg",
+			"mimeType": "image/svg+xml",
+			"sizes": [
+				"any"
+			]
+		}
+	],
+	"repository": {
+		"url": "https://github.com/nirholas/provenance-mcp",
+		"source": "github"
+	},
+	"version": "0.1.0",
+	"packages": [
+		{
+			"registryType": "npm",
+			"identifier": "@three-ws/provenance-mcp",
+			"version": "0.1.0",
+			"runtimeHint": "npx",
+			"transport": {
+				"type": "stdio"
+			},
+			"environmentVariables": [
+				{
+					"name": "THREE_WS_BASE",
+					"description": "Base URL of the three.ws API that serves the agent-actions ledger. Override only when self-hosting or targeting a preview deployment.",
+					"format": "string",
+					"isRequired": false,
+					"default": "https://three.ws"
+				},
+				{
+					"name": "THREE_WS_TIMEOUT_MS",
+					"description": "Per-request timeout in milliseconds for the ledger reads/appends.",
+					"format": "number",
+					"isRequired": false,
+					"default": "20000"
+				},
+				{
+					"name": "THREE_WS_TOKEN",
+					"description": "Bearer token authenticating every call — a three.ws API key (sk_live_…) or an OAuth access token. The ledger is owner-scoped: you can read and append actions only for agents your token owns. Required for all three tools. Treat like a password.",
+					"format": "string",
+					"isRequired": true,
+					"isSecret": true
+				},
+				{
+					"name": "THREE_WS_SIGNER_KEY",
+					"description": "Optional 0x-prefixed EVM private key. When set, append_agent_action ERC-191-signs each action so anyone can ecrecover the signer and verify authorship on-chain. A per-call `signer_key` arg overrides it. Omit to append unsigned. Treat like cash.",
+					"format": "string",
+					"isRequired": false,
+					"isSecret": true
+				}
+			]
+		}
+	]
+}

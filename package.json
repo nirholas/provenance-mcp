@@ -1,0 +1,57 @@
+{
+	"name": "@three-ws/provenance-mcp",
+	"version": "0.1.0",
+	"mcpName": "io.github.nirholas/provenance-mcp",
+	"description": "The three.ws agent action-provenance log over MCP — append-only, ERC-191-signed, on-chain-verifiable. Any AI agent can record what it did and audit another agent's provenance trail. Cursor-paginated reads + a signed append to an immutable ledger.",
+	"type": "module",
+	"author": "nirholas <support@three.ws>",
+	"license": "SEE LICENSE IN LICENSE",
+	"homepage": "https://three.ws",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nirholas/provenance-mcp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/nirholas/three.ws/issues"
+	},
+	"keywords": [
+		"mcp",
+		"three.ws",
+		"provenance",
+		"agent",
+		"audit",
+		"erc-191",
+		"signature",
+		"append-only",
+		"trust"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"src",
+		"server.json",
+		"README.md",
+		"LICENSE"
+	],
+	"bin": {
+		"provenance-mcp": "src/index.js"
+	},
+	"main": "./src/index.js",
+	"exports": {
+		".": "./src/index.js"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "node --test \"test/**/*.test.mjs\"",
+		"inspect": "npx -y @modelcontextprotocol/inspector node src/index.js"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.29.0",
+		"ethers": "^6.16.0",
+		"zod": "^3.23.8"
+	}
+}
