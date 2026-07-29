@@ -144,7 +144,7 @@ This is the same primitive three.ws uses server-side for its Portable & Verifiab
 - Homepage: https://three.ws
 - Changelog: https://three.ws/changelog
 - Issues: https://github.com/nirholas/three.ws/issues
-- License: Apache-2.0 — see [LICENSE](./LICENSE)
+- License: All rights reserved — see [LICENSE](./LICENSE)
 
 ---
 
