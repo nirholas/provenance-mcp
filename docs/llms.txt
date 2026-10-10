@@ -1,0 +1,20 @@
+# @three-ws/provenance-mcp
+
+> The three.ws agent action-provenance log over MCP — append-only, ERC-191-signed, on-chain-verifiable. Any AI agent can record what it did and audit another agent's provenance trail. Cursor-paginated reads + a signed append to an immutable ledger.
+
+@three-ws/provenance-mcp is a Model Context Protocol server from three.ws. Install: `npx -y @three-ws/provenance-mcp`.
+
+## Docs
+
+- [README](https://github.com/nirholas/provenance-mcp/blob/main/README.md): install, configuration, full reference
+- [Documentation site](https://nirholas.github.io/provenance-mcp/): the README as a web page
+- [Full text for LLMs](https://nirholas.github.io/provenance-mcp/llms-full.txt): README inlined
+- [AGENTS.md](https://github.com/nirholas/provenance-mcp/blob/main/AGENTS.md): guidance for coding agents
+
+## Project
+
+- [Source](https://github.com/nirholas/provenance-mcp)
+- [npm](https://www.npmjs.com/package/@three-ws/provenance-mcp)
+- [three.ws](https://three.ws): the platform this is part of
+- [Issues](https://github.com/nirholas/provenance-mcp/issues)
+- [MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.nirholas%2Fprovenance-mcp)
