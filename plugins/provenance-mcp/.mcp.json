@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "provenance-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@three-ws/provenance-mcp"
+      ],
+      "env": {
+        "THREE_WS_TOKEN": "${THREE_WS_TOKEN}"
+      }
+    }
+  }
+}
