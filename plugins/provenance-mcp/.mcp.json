@@ -7,7 +7,7 @@
         "@three-ws/provenance-mcp"
       ],
       "env": {
-        "THREE_WS_TOKEN": "${THREE_WS_TOKEN}"
+        "THREE_WS_TOKEN": "${THREE_WS_TOKEN:-}"
       }
     }
   }
